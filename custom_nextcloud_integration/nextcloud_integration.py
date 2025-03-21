@@ -1,9 +1,12 @@
 import requests
 import frappe
+import os
+
 
 NEXTCLOUD_URL = "https://nextcloud.roothome.co.uk/remote.php/dav/files/system.erpnext/"
 NEXTCLOUD_USER = "system.erpnext@roothome.co.uk"
-NEXTCLOUD_PASSWORD = "FuoVb!9riu*T8f#!E3@8@@ghYSaS"
+NEXTCLOUD_PASSWORD = os.getenv("NEXTCLOUD_PASSWORD")
+
 
 def upload_to_nextcloud(file_doc):
     """Uploads ERPNext file to Nextcloud via WebDAV and saves the file URL in ERPNext."""
