@@ -5,6 +5,15 @@ app_description = "next cloud"
 app_email = "shoaibshah1255@gmail.com"
 app_license = "mit"
 
+
+
+doc_events = {
+    "File": {
+        "after_insert": "custom_nextcloud_integration.nextcloud_integration.upload_after_insert"
+    }
+}
+
+
 # Apps
 # ------------------
 
